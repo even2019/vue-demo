@@ -5,10 +5,10 @@
   </div>
 </template>
 <script>
+import { Login } from '@/services/public.js';
 export default {
   created() {
-    console.log(this.$http);
-    this.$http.post('/login').then((res)=>{
+    Login().then((res) => {
       console.log(res);
     });
   }
