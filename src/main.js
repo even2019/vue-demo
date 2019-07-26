@@ -3,6 +3,8 @@ import App from './App.vue';
 import Router from './router';
 import Store from './store';
 import './utils/index';
+import './assets/reset.css'; //重置样式
+import './assets/main.scss'; //主要样式
 
 Vue.config.productionTip = false;
 
