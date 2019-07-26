@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import Router from './router';
 import Store from './store';
+import 'mock.js' //模拟数据
 import './utils/index';
 import './assets/reset.css'; //重置样式
 import './assets/main.scss'; //主要样式
