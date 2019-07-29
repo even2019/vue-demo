@@ -21,7 +21,9 @@
         </span>
       </div>
     </div>
-    <router-view />
+    <div class="main">
+      <router-view />
+    </div>
     <div class="footer">
       <div class="copyright">
         本站不提供任何视听上传服务，所有内容均来自视频分享 <br />
