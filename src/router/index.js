@@ -17,9 +17,13 @@ export default new Router({
           path: '/videoCenter',
           name: 'videoCenter',
           component: () => import('../views/VideoCenter/index')
+        },
+        {
+          path: '/lineCenter',
+          name: 'lineCenter',
+          component: () => import('../views/linecenter/Index')
         }
       ]
     },
-
   ]
 });

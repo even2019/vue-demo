@@ -50,7 +50,7 @@ export default {
         },
         {
           Name: '直播',
-          Link: '',
+          Link: '/LineCenter',
         },
         {
           Name: '资讯',
@@ -70,4 +70,3 @@ export default {
   }
 }
 </script>
-
