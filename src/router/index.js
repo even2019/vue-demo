@@ -11,7 +11,15 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Layout
-    }
+      component: Layout,
+      children: [
+        {
+          path: '/videoCenter',
+          name: 'videoCenter',
+          component: () => import('../views/VideoCenter/index')
+        }
+      ]
+    },
+
   ]
 });

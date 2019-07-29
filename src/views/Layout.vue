@@ -4,7 +4,12 @@
       <div class="logo">logo</div>
       <div class="nav-bar">
         <div class="nav-link" v-for="(item, index) in navList" :key="index">
+<<<<<<< Updated upstream
           <a>{{item.Name}}</a>
+=======
+          <router-link :to="item.Link">{{item.Name}}</router-link>
+          <span class="nav-gap"></span>
+>>>>>>> Stashed changes
         </div>
       </div>
       <div class="login">
@@ -37,7 +42,7 @@ export default {
       navList: [
         {
           Name: '视频',
-          Link: '',
+          Link: '/VideoCenter',
         },
         {
           Name: '话题',
