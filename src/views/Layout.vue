@@ -5,17 +5,14 @@
       <div class="nav-bar">
         <div class="nav-link" v-for="(item, index) in navList" :key="index">
           <a>{{item.Name}}</a>
-          <span class="nav-gap"></span>
         </div>
       </div>
       <div class="login">
-        <span class="nav-gap"></span>
         <span class="content">
           <img src="../assets/images/phone.png" alt="">
           <a>下载手机客户端</a>
           <span class="down-arrow"></span>
         </span>
-        <span class="nav-gap"></span>
         <span class="content">
           <a>登录</a>或<a>注册</a>
         </span>
