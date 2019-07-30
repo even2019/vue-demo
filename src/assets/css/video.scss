@@ -1,1 +1,64 @@
-//视频中心
+/****++++====
+  视频中心
+ ====++++****/
+$url:'./images/video';
+
+.video-center{
+  .banner-content,
+  .vid-container{
+    width:1100px;
+    margin:0 auto;
+  }
+  .banner{
+    width:100vw;
+    height:140px;
+    background:#000000 url(#{$url}/u131.jpg) no-repeat center center;
+    .banner-title{
+      float: left;
+      h1{
+        font-size: 48px;
+        margin-top:65px;
+      }
+    }
+    .vid-search{
+      float: right;
+      .search-contain{
+        width:320px;
+        height:50px;
+        position: relative;
+        background:url(#{$url}/u1458.png) no-repeat center center;
+        .search-inp{
+          position: absolute;
+          top:6px;
+          left:6px;
+          &::after{
+            content: '';
+            top: 5px;
+            right: -5px;
+            height:25px;
+            position: absolute;         
+            border-right:1px solid #B2B2B2; 
+          }
+          input{
+            width:240px;
+            height:35px;
+            padding: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            border:none;
+            background: transparent;
+          }
+        }
+        .search-btn{
+          position: absolute;
+          color: #0099CC;
+          font-size: 14px;
+          right: 25px;
+          top: 16px;
+        }
+      }
+    }
+  }
+}
+
+
