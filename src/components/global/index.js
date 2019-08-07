@@ -3,6 +3,7 @@ import Header from './Header/Index.vue';
 import Footer from './Footer/Index.vue';
 import Toast from './Toast/index.js';
 import Modal from './Modal/index.js';
+import Tab from './Tab/Index.vue';
 import Loading from './Loading/Index.vue';
 import $Loading from './Loading/index.js';
 
@@ -11,6 +12,7 @@ const components = [
   Footer,
   Toast,
   Modal,
+  Tab,
   Loading,
 ];
 

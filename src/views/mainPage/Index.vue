@@ -1,11 +1,10 @@
 <template>
-  <div id="mainPage"
-    class="main-page">
+  <div id="mainPage" class="main-page">
     <div class="mp-banner">
 
     </div>
     <div class="mp-content">
-      <div class="mp-slider">
+      <!-- <div class="mp-slider">
         <div class="left">
           <swiper :options="swiperOption">
             <swiper-slide v-for="(slide, index) in slideList"
@@ -32,12 +31,16 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="mp-hotNews">
-        <div class="article-title">
-
-        </div>
-        <div class="article-content"></div>
+        <g-tab :options="tabOption" :tabs="tabList" :titles="titleConfig" :content="contentList" @click="handleTab">
+          <template v-slot:title>
+            <span>123</span>
+          </template>
+          <template v-slot:content>
+            <span>123</span>
+          </template>
+        </g-tab>
       </div>
       <div class="mp-live"></div>
       <div class="mp-hotEvents"></div>
@@ -48,9 +51,158 @@
 <script>
 const bannerImg = require('../../assets/images/mainPage/banner.jpg');
 const imgs = require('../../assets/images/mainPage/imgs.jpg');
+const liveIcon = require('../../assets/images/mainPage/live.png');
+const arrow = require('../../assets/images/mainPage/right-arrow.png');
+const contentImg = require('../../assets/images/mainPage/tvInterface.jpg');
+const contentUser = require('../../assets/images/mainPage/iconUser.png');
+const populationIcon = require('../../assets/images/mainPage/smallPerson.png');
+const tvIcon = require('../../assets/images/mainPage/iconTv.png');
 export default {
   data() {
     return {
+      tabOption: {
+        hasTitle: true,
+        hasContent: true,
+      },
+      titleConfig: {
+        iconUrl1: liveIcon,
+        text: '正在直播',
+        IconUrl2: arrow,
+        enterText: '直播大厅',
+        enterUrl: '/videoCenter'
+      },
+      contentList: [
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+        {
+          imgUrl: contentImg,
+          videoUrl: '#',
+          userIcon: contentUser,
+          userName: '2009',
+          populationIcon: populationIcon,
+          populationNum: '32.1万',
+          tvIcon: tvIcon
+        },
+      ],
+      tabList: [
+        {
+          text: '全部',
+          value: 1
+        },
+        {
+          text: '英雄联盟',
+          value: 2
+        },
+        {
+          text: '炉石传说',
+          value: 3
+        },
+        {
+          text: 'DOTA2',
+          value: 4
+        },
+        {
+          text: 'DOTA',
+          value: 4
+        },
+      ],
       swiperOption: {
         width: 550,
         autoplay: {
@@ -63,7 +215,7 @@ export default {
           clickable: true,
           bulletClass: 'my-bullet',
           bulletActiveClass: 'my-bullet-active',
-        }
+        },
       },
       slideList: [
         {
@@ -126,6 +278,9 @@ export default {
     change(index) {
       this.currentIndex = index
     },
+    handleTab(val) {
+      console.log(val, 'xxxxxxxxxxxxx');
+    }
   }
 }
 </script>
