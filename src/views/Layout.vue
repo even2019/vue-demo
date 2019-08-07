@@ -1,35 +1,10 @@
 <template>
   <div>
-    <div class="header">
-      <div class="h-content clear-fix">
-        <div class="logo">logo</div>
-        <div class="nav-bar">
-          <div class="nav-link" v-for="(item, index) in navList" :key="index">
-            <router-link :to="item.Link">{{item.Name}}</router-link>
-            <span class="nav-gap"></span>
-          </div>
-        </div>
-        <div class="login">
-          <span class="content">
-            <img src="../assets/images/phone.png" alt="">
-            <a>下载手机客户端</a>
-            <span class="down-arrow"></span>
-          </span>
-          <span class="content">
-            <a>登录</a>或<a>注册</a>
-          </span>
-        </div>
-      </div>
-    </div>
+    <g-header :navList="navList"></g-header>
     <div class="main">
       <router-view />
     </div>
-    <div class="footer">
-      <div class="copyright">
-        本站不提供任何视听上传服务，所有内容均来自视频分享 <br />
-        "For The Dream"|Copyright © 2014 JiuGuo Network Technology|浙ICP备14025058号-1
-      </div>
-    </div>
+    <g-footer></g-footer>
   </div>
 </template>
 <script>
@@ -65,6 +40,7 @@ export default {
       ]
     }
   },
+
   created() {
     Login().then((res) => {
       console.log(res);

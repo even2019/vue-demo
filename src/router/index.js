@@ -11,9 +11,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: Layout,
       children: [
+        ...MainPage,
         {
           path: '/videoCenter',
           name: 'videoCenter',
@@ -23,8 +23,7 @@ export default new Router({
           path: '/lineCenter',
           name: 'lineCenter',
           component: () => import('../views/linecenter/Index')
-        },
-        ...MainPage,
+        },    
       ]
     },
   ]

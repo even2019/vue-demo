@@ -1,9 +1,9 @@
 //首页
-$url: './images';
+$url: './images/mainPage';
 .mp-search {
   width: 100%;
   height: 160px;
-  background-image: url('#{$url}/mainPage/title.jpg');
+  background:#000000 url('#{$url}/title.jpg') no-repeat center center;
 }
 
 .mp-banner {
