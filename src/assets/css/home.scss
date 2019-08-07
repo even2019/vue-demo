@@ -8,7 +8,7 @@ $url: './images/mainPage';
   }
   .mp-content {
     width: 1100px;
-    margin:0 auto;
+    margin: 0 auto;
     .mp-slider {
       height: 450px;
       padding: 20px;
@@ -51,15 +51,10 @@ $url: './images/mainPage';
         }
       }
     }
-    // .mp-hotNews {
-    // }
-    // .mp-live {
-    // }
-
-    // .mp-hotEvents {
-    // }
-
-    // .mp-hotVideos {
-    // }
+    .mp-tabInfo {
+      height: 505px;
+      vertical-align: center;
+      background: #1c3a44;
+    }
   }
 }

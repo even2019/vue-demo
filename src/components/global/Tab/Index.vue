@@ -30,7 +30,9 @@
         <ul>
           <li v-for="(item, index) in content" :key="index">
             <div>
-              <img :src="item.imgUrl" alt="" class="videoImg">
+              <div :style="{background: `url('${item.imgUrl}') no-repeat center/110%`}" class="videoImg">
+                <div class="ico-play"></div>
+              </div>
               <div class="middle">
                 <img :src="item.userIcon" alt="" class="userIcon">
                 <div class="userName">{{item.userName}}</div>
@@ -168,6 +170,22 @@ export default {
           .videoImg {
             width: 160px;
             height: 100px;
+            &:hover {
+              cursor: pointer;
+              box-sizing: border-box;
+              border: 2px solid #0099cc;
+            }
+            .ico-play {
+              position: relative;
+              top: 10px;
+              left: 40px;
+              width: 80px;
+              height: 80px;
+            }
+            &:hover .ico-play {
+              background: url("../../../assets/images/mainPage/play.png")
+                no-repeat center/50%;
+            }
           }
           .middle {
             padding: 5px 0 0 5px;
