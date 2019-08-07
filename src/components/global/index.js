@@ -11,7 +11,7 @@ const components = [
   Footer,
   Toast,
   Modal,
-  Loading
+  Loading,
 ];
 
 export default {

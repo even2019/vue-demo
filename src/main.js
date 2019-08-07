@@ -7,10 +7,13 @@ import './plugins/index' //模拟数据
 import './utils/index';
 import './assets/reset.css'; //重置样式
 import './assets/main.scss'; //主要样式
+import VueAwesomeSwiper from 'vue-awesome-swiper'; // 轮播图引入
+import 'swiper/dist/css/swiper.css' // 轮播图样式
 
 Vue.config.productionTip = false;
 
 Vue.use(globalComponent);
+Vue.use(VueAwesomeSwiper);
 
 new Vue({
   router: Router,
