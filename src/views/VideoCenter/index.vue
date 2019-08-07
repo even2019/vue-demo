@@ -1,15 +1,15 @@
 <template>
   <div class="video-center">
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="banner-content">
           <div class="banner-title">
             <h1>视频中心</h1>
-          </div>         
+          </div>
           <div class="vid-search">
             <div class="search-contain">
               <div class="search-inp">
                 <input type="text">
-              </div>             
+              </div>
               <div class="search-btn">
                 <p>搜索</p>
               </div>
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> -->
     <div class="vid-container">
       <div class="crumbs"></div>
       <div class="vid-play-content"></div>
@@ -34,7 +34,7 @@
       <div class="comment-operate"></div>
       <div class="comment-list"></div>
     </div>
-    
+
   </div>
 </template>
 

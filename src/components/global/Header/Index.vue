@@ -18,7 +18,7 @@
           <span class="down-arrow"></span>
         </span>
         <span class="content">
-          <a>登录</a>或<a>注册</a>
+          <a>登录</a>或<router-link to="/register">注册</router-link>
         </span>
       </div>
     </div>
@@ -35,4 +35,3 @@ export default {
   }
 }
 </script>
-

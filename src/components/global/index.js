@@ -6,14 +6,16 @@ import Modal from './Modal/index.js';
 import Tab from './Tab/Index.vue';
 import Loading from './Loading/Index.vue';
 import $Loading from './Loading/index.js';
+import MapSearch from './MapSearch/Index.vue';
 
 const components = [
-  Header, 
+  Header,
   Footer,
   Toast,
   Modal,
   Tab,
   Loading,
+  MapSearch,
 ];
 
 export default {
