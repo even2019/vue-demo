@@ -27,7 +27,7 @@ export default {
         },
         {
           Name: '直播',
-          Link: '/LineCenter',
+          Link: '/linecenter',
         },
         {
           Name: '资讯',
