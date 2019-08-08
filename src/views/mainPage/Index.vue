@@ -31,7 +31,7 @@
         </g-tab> -->
       </div>
       <div class="mp-tabInfo">
-        <g-tab :options="tabOption2" :tabs="tabList2" :titles="titleConfig2" :content="contentList2" @click="handleTab">
+        <g-tab :options="tabOption2" :tabs="tabList2" :titles="titleConfig2" :content="contentList2" @click="handleTab" :contentStyle="contentStyle">
           <template v-slot:title>
             <span>123</span>
           </template>
@@ -59,7 +59,7 @@ export default {
       tabOption1: {
         hasTitle: true,
         hasContent: true,
-        editContent: true
+        editContent: true,
       },
       titleConfig1: {
         iconUrl1: liveIcon,
@@ -100,6 +100,9 @@ export default {
         IconUrl2: arrow,
         enterText: '直播大厅',
         enterUrl: '/videoCenter'
+      },
+      contentStyle: {
+        height: '1500px',
       },
       tabList2: [
         {
@@ -314,7 +317,23 @@ export default {
   }
 }
 </script>
-<style type="text/css">
+<style lang="scss" scoped>
+.main-page {
+  height: auto;
+  overflow: hidden;
+  .mp-content {
+    height: auto;
+    overflow: hidden;
+    .mp-tabInfo {
+      height: auto;
+      overflow: hidden;
+      .tabAll {
+        height: auto;
+        overflow: hidden;
+      }
+    }
+  }
+}
 .my-bullet {
   width: 8px;
   height: 8px;

@@ -91,4 +91,10 @@ export default {
 }
 </script>
 
-## 样式编辑暂不支持 
+## 样式编辑
+contentStyle 编辑内容框样式 
+例子：
+contentStyle: {
+  height: '1000px',
+  background: 'red'
+},

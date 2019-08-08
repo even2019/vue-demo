@@ -22,7 +22,7 @@
         </li>
       </ul>
     </div>
-    <div v-if="options.hasContent != null ? options.hasContent:false" class="content">
+    <div v-if="options.hasContent != null ? options.hasContent:false" class="content" :style="contentStyle">
       <div v-if="options.editContent != null ? options.editContent:false">
         <slot name="content"></slot>
       </div>
@@ -77,6 +77,12 @@ export default {
         return []
       }
     },
+    contentStyle: { // 内容框样式
+      type: Object,
+      default: function(){
+        return {}
+      }
+    }
   },
   data() {
     return {
@@ -97,6 +103,8 @@ export default {
 <style lang="scss" scoped>
 .tabAll {
   width: 100%;
+  height:auto;
+  overflow: hidden;
   .title {
     height: 50px;
     background: #1c3a44;
@@ -203,6 +211,7 @@ export default {
             }
           }
           .bottom {
+            float: left;
             height: 22px;
             line-height: 22px;
             .populationIcon {
