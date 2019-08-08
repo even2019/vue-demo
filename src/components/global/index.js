@@ -7,6 +7,7 @@ import Tab from './Tab/Index.vue';
 import Loading from './Loading/Index.vue';
 import $Loading from './Loading/index.js';
 import MapSearch from './MapSearch/Index.vue';
+import InputGroup from './InputGroup/Index.vue'; // 输入框
 
 const components = [
   Header,
@@ -16,6 +17,7 @@ const components = [
   Tab,
   Loading,
   MapSearch,
+  InputGroup,
 ];
 
 export default {

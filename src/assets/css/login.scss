@@ -1,1 +1,47 @@
 //登录注册
+
+//注册
+.reg-box {
+	width: 360px;
+	margin: 0 auto;
+	padding-top: 130px;
+
+	.text-group {
+		position: relative;
+
+		.invalid-feedback {
+			position: absolute;
+			left: calc(100% + 10px);
+			width: 200px;
+			color: #e53c55;
+		}
+	}
+
+	.register-des {
+		margin-bottom: 20px;
+		color: #999;
+
+		a {
+			color: #0099cc;
+		}
+	}
+
+	.register-btn {
+		button {
+			width: 100%;
+			height: 40px;
+			background-color: #0099cc;
+			border-radius: 4px;
+			color: white;
+			font-size: 16px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+
+		button[disabled] {
+			background-color: #98999a;
+		}
+	}
+
+}

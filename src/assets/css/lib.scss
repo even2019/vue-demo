@@ -152,3 +152,51 @@ $url:'./images/lib';
   //   }
   // }
 }
+
+
+//InputGroup组件
+.text-group {
+  // width: 360px;
+  // margin: 0 auto;
+  margin-bottom: 20px;
+
+  .input-group {
+    height: 40px;
+    border: 1px solid #393e40;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #04090a;
+
+    input {
+      padding: 0 10px;
+      height: 100%;
+      width: 70%;
+      outline: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      width: 30%;
+      height: 100%;
+      // padding: 10px;
+      border: none;
+      outline: none;
+      background: #0099cc;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button[disabled] {
+      background: #393e40;
+      color: #aaa;
+    }
+
+  }
+}
