@@ -2,7 +2,7 @@
   <!-- 地图搜索 -->
   <div class="map-search">
     <div class="map-wrap">
-      <h1 class="map-title">注册</h1>
+      <h1 class="map-title">{{Title}}</h1>
       <div class="sear-box">
         <div class="sear-bar">
           <input v-model="title" type="text" class="sear-input" name="title" placeholder="搜索关键字" />
@@ -26,7 +26,8 @@ export default {
     return {
       title: "",
     }
-  }
+  },  
+  props:['Title'],
 }
 </script>
 

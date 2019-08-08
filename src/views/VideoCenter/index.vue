@@ -1,6 +1,6 @@
 <template>
   <div class="video-center">
-    <MapSearch />
+    <MapSearch Title="视频中心"/>
     <!-- <div class="banner">
         <div class="banner-content">
           <div class="banner-title">
