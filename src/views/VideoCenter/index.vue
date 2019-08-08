@@ -1,5 +1,6 @@
 <template>
   <div class="video-center">
+    <MapSearch />
     <!-- <div class="banner">
         <div class="banner-content">
           <div class="banner-title">
@@ -24,7 +25,7 @@
             </div>
           </div>
         </div>
-    </div> -->
+    </div>-->
     <div class="vid-container">
       <div class="crumbs"></div>
       <div class="vid-play-content"></div>
@@ -34,7 +35,6 @@
       <div class="comment-operate"></div>
       <div class="comment-list"></div>
     </div>
-
   </div>
 </template>
 
@@ -45,5 +45,4 @@ export default {
 </script>
 
 <style>
-
 </style>
