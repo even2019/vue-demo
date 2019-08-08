@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MapSearch />
+    <MapSearch title="注册" />
   </div>
 </template>
 

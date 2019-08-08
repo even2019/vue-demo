@@ -1,31 +1,6 @@
 <template>
   <div class="video-center">
     <MapSearch Title="视频中心"/>
-    <!-- <div class="banner">
-        <div class="banner-content">
-          <div class="banner-title">
-            <h1>视频中心</h1>
-          </div>
-          <div class="vid-search">
-            <div class="search-contain">
-              <div class="search-inp">
-                <input type="text">
-              </div>
-              <div class="search-btn">
-                <p>搜索</p>
-              </div>
-            </div>
-            <div class="top-search">
-              <div class="search-label">热搜</div>
-              <ul class="search-title-list">
-                <li>2009</li>
-                <li>紫色水离子</li>
-                <li>MISS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>-->
     <div class="vid-container">
       <div class="crumbs"></div>
       <div class="vid-play-content"></div>
