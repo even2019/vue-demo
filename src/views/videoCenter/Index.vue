@@ -12,10 +12,19 @@
             </li>
           </ul>
         </div>
-        
         <div class="control-right" @click="goStep(-1)"></div>
       </div>
-      <div class="vid-play-content"></div>
+      <div class="vid-play-content">
+        <div class="play-left">
+          
+          <span></span>
+        </div>
+        <div class="play-right">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
       <div class="vid-label"></div>
       <div class="vid-list"></div>
       <div class="advert"></div>
