@@ -48,6 +48,22 @@ $url:'./images/video';
       width:1000px;
       height:100%;
       overflow: hidden;
+      ul{
+        position: absolute;
+        transition: all .3s linear;
+        height:100px;
+        li{
+          float: left;
+          width:100px;
+          height:100px;
+          text-align: center;
+          img{
+            width:40px;
+            height:40px;
+            margin:15px 0 10px;
+          }
+        }
+      }
     }
   }
 

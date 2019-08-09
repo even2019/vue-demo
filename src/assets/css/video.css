@@ -55,3 +55,22 @@
   height: 100%;
   overflow: hidden;
 }
+
+.video-center .crumbs .video-title-list ul {
+  position: absolute;
+  transition: all .3s linear;
+  height: 100px;
+}
+
+.video-center .crumbs .video-title-list ul li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.video-center .crumbs .video-title-list ul li img {
+  width: 40px;
+  height: 40px;
+  margin: 15px 0 10px;
+}

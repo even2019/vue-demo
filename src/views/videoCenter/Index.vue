@@ -3,16 +3,17 @@
     <MapSearch Title="视频中心"/>
     <div class="vid-container">
       <div class="crumbs">
-        <div class="control-left"></div>
+        <div class="control-left" @click="goStep(1)"></div>
         <div class="video-title-list">
-          <ul>
-            <li v-for="(item,index) in this.crumbsData" :key="index">
-              {{item.name}}
+          <ul :style="{width:ulWidth,left:ulLeft}">
+            <li v-for="(item,index) in this.crumbsData" :key="index" :active="active">
+              <img :src="item.url" alt="">
+              <p>{{item.name}}</p>
             </li>
           </ul>
         </div>
         
-        <div class="control-right"></div>
+        <div class="control-right" @click="goStep(-1)"></div>
       </div>
       <div class="vid-play-content"></div>
       <div class="vid-label"></div>
@@ -30,7 +31,13 @@ import { Video } from '@/services/public.js';
 export default {
   data() {
     return {
-      crumbsData:''
+      crumbsData:'',
+      ulLeft:'0'
+    }
+  },
+  computed: {
+    ulWidth(){
+      return this.crumbsData.length*100+'px';
     }
   },
   created() {
@@ -40,11 +47,17 @@ export default {
       }else{
         console.log(res.message)
       }
-      console.log(this.crumbsData)
     })
   },
   methods: {
-    
+    goStep(dirc){
+      if(dirc==1&&parseInt(this.ulLeft)<0){
+        this.ulLeft=parseInt(this.ulLeft)+100+"px";
+      }else if(dirc==-1&&parseInt(this.ulLeft)>1000-this.crumbsData.length*100){
+        this.ulLeft=parseInt(this.ulLeft)-100+"px";
+      }
+      
+    }
   },
 }
 </script>
