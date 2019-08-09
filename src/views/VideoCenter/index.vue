@@ -2,7 +2,8 @@
   <div class="video-center">
     <MapSearch Title="视频中心"/>
     <div class="vid-container">
-      <div class="crumbs"></div>
+      <div class="crumbs">
+      </div>
       <div class="vid-play-content"></div>
       <div class="vid-label"></div>
       <div class="vid-list"></div>

@@ -68,6 +68,7 @@ export default {
         enterText: '直播大厅',
         enterUrl: '/videoCenter'
       },
+      contentStyle:{},
       tabList1: [
         {
           text: '全部',

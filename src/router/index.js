@@ -20,7 +20,7 @@ export default new Router({
                 {
                     path: "/videoCenter",
                     name: "videoCenter",
-                    component: () => import("../views/VideoCenter/index")
+                    component: () => import("../views/videoCenter/Index")
                 },
                 ...LineCenter,
                 ...Register
