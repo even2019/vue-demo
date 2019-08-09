@@ -10,7 +10,7 @@
 <script>
 import { Login } from '@/services/public.js';
 export default {
-  data() {
+  data () {
     return {
       navList: [
         {
@@ -41,7 +41,7 @@ export default {
     }
   },
 
-  created() {
+  created () {
     Login().then((res) => {
       console.log(res);
     });

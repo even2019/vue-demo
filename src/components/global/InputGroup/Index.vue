@@ -2,8 +2,7 @@
   <div class="text-group">
     <!-- 组件结构 -->
     <!-- 组件容器 -->
-    <div class="input-group"
-         :class="{'is-invalid':error}">
+    <div class="input-group">
       <!-- 输入框 -->
       <input :type="type"
              :value="value"
@@ -40,7 +39,4 @@ export default {
 </script>
 
 <style>
-.is-invalid {
-  border: 1px solid #e53c55 !important;
-}
 </style>

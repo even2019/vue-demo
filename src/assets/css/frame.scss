@@ -12,10 +12,12 @@
   width: 100%;
   height: 42px;
   background: rgb(39, 42, 47);
-  .h-content{
-    width:1100px;
-    margin:0 auto;
+
+  .h-content {
+    width: 1100px;
+    margin: 0 auto;
   }
+
   .logo {
     float: left;
     color: #fff;
@@ -23,52 +25,63 @@
     line-height: 42px;
     text-align: center;
   }
+
   .nav-bar {
     float: left;
     color: #0099cc;
     line-height: 42px;
     text-align: center;
+
     .nav-link {
       float: left;
       width: 102px;
       border-right: 1px solid rgb(51, 52, 59);
-      a{
+
+      a {
         color: #0099cc;
       }
+
       &:hover {
         color: #fff;
         cursor: pointer;
       }
     }
   }
+
   .login {
     float: right;
     color: #889194;
     width: 400px;
     line-height: 42px;
     text-align: center;
+
     .content {
       float: left;
       padding-left: 10px;
       border-left: 1px solid rgb(51, 52, 59);
+
       img {
         vertical-align: middle;
       }
+
       a {
         color: #0099cc;
         margin: 0 9px;
+
         &:hover {
           color: #fff;
           cursor: pointer;
         }
       }
     }
+
     .down-arrow {
       display: inline-block;
       position: relative;
       width: 40px;
       height: 24px;
       margin-right: 20px;
+
       &::after {
         display: inline-block;
         content: ' ';
@@ -93,10 +106,10 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  color:#fff;
+  color: #fff;
   padding: 42px 0 20px;
-  min-height: calc(100vh - 162px);
-  background: linear-gradient(#000 150px,#1C3A44);
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(#000 150px, #1C3A44);
 }
 
 //共用底部
@@ -105,6 +118,7 @@
   height: 100px;
   top: -100px;
   background: rgb(17, 35, 41);
+
   .copyright {
     color: #889194;
     line-height: 30px;

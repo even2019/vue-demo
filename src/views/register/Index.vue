@@ -30,7 +30,8 @@
       </div>
       <!-- 登录按钮 -->
       <div class="register-btn">
-        <button>注册</button>
+        <button :disabled="isClick"
+                @click="handleRegister">注册</button>
       </div>
 
     </div>
@@ -55,11 +56,17 @@ export default {
   },
   computed: {
     isClick () {
-      if (!this.phone || !this.verifyCode) return true;
+      if (!this.userName || !this.passWord || !this.phone || !this.verifyCode) return true;
       else return false;
     }
   },
   methods: {
+    handleRegister () {
+      //取消错误提醒
+      this.errors = {};
+
+    },
+
     getVerifyCode () {
       // 获取验证码
       if (this.validatePhone()) {
@@ -67,7 +74,6 @@ export default {
         this.validateBtn();
       }
     },
-
     validateBtn () {
       let time = 60;
       let timer = setInterval(() => {
@@ -105,8 +111,6 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <style>
