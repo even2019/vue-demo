@@ -3,7 +3,7 @@ import App from './App.vue';
 import Router from './router';
 import Store from './store';
 import globalComponent from './components/global/index';
-import './plugins/index' //模拟数据
+import './plugins/index' //插件注册
 import './utils/index';
 import './assets/reset.css'; //重置样式
 import './assets/main.scss'; //主要样式

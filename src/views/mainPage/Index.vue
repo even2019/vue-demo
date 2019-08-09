@@ -101,9 +101,6 @@ export default {
         enterText: '直播大厅',
         enterUrl: '/videoCenter'
       },
-      contentStyle: {
-        height: '1500px',
-      },
       tabList2: [
         {
           text: '全部',
