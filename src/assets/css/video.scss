@@ -57,7 +57,12 @@ $url:'./images/video';
           width:100px;
           height:100px;
           text-align: center;
+          &.active{
+            background:linear-gradient(#191A1A 64px,#21414B);
+          }
           img{
+            display: inline-block;
+            background: #4CAF50;
             width:40px;
             height:40px;
             margin:15px 0 10px;
@@ -70,56 +75,65 @@ $url:'./images/video';
     height:405px;
     width:100%;
     margin-top: 20px;
+    .play-left{
+      float: left;
+      padding:10px;
+      width:770px;
+      height:100%;
+      background: #0E1E22;
+      .img-big{
+        position: relative;
+        overflow: hidden;
+        float: left;
+        width:625px;
+        height:100%;
+        ul{
+          position: relative;
+          top:0;
+          transition: all .3s linear
+        }
+        li{
+          position: relative;
+          height:385px;
+          background-size: 100% 100%;
+        }
+        .img-info{
+          position: absolute;
+          display: inline-block;
+          color: #D6D6C5;
+          font-size: 16px;
+          background: rgba(0, 0, 0, .5);
+          height:40px;
+          line-height: 40px;
+          width:100%;
+          bottom:0;
+        }
+      }
+      .img-small{
+        float: left;
+        width:123px;
+        margin-left:2px;
+        height:100%;
+        li{
+          height:77px;   
+          border:2px solid transparent;   
+          &.active{
+            border:2px solid #0099CC;
+          }
+          span{
+            height: 100%;
+            width: 100%;
+            background-size: 100% 100%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .play-right{
+      float: left;
+      margin-left:10px;
+      width:320px;
+      height:100%;
+    }
   }
-
-  // .banner{
-  //   width:100vw;
-  //   height:140px;
-  //   background:#000000 url(#{$url}/u131.jpg) no-repeat center center;
-  //   .banner-title{
-  //     float: left;
-  //     h1{
-  //       font-size: 48px;
-  //       margin-top:65px;
-  //     }
-  //   }
-  //   .vid-search{
-  //     float: right;
-  //     .search-contain{
-  //       width:320px;
-  //       height:50px;
-  //       position: relative;
-  //       background:url(#{$url}/u1458.png) no-repeat center center;
-  //       .search-inp{
-  //         position: absolute;
-  //         top:6px;
-  //         left:6px;
-  //         &::after{
-  //           content: '';
-  //           top: 5px;
-  //           right: -5px;
-  //           height:25px;
-  //           position: absolute;
-  //           border-right:1px solid #B2B2B2;
-  //         }
-  //         input{
-  //           width:240px;
-  //           height:35px;
-  //           padding: 5px;
-  //           font-size: 16px;
-  //           box-sizing: border-box;
-  //           border:none;
-  //           background: transparent;
-  //         }
-  //       }
-  //       .search-btn{
-  //         position: absolute;
-  //         color: #0099CC;
-  //         font-size: 14px;
-  //         right: 25px;
-  //         top: 16px;
-  //       }
-  //     }
-  //   }
-  // }
 }
