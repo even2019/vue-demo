@@ -1,1 +1,14 @@
 //存放一些共用组件的样式代码
+
+.clearFix{
+  &::before,
+  &::after{
+    content:'';
+    display:table;
+  }
+  &::after{
+    clear: both;
+    overflow: hidden;
+  }
+  
+}

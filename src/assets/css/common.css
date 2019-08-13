@@ -1,0 +1,9 @@
+.clearFix::before, .clearFix::after {
+  content: '';
+  display: table;
+}
+
+.clearFix::after {
+  clear: both;
+  overflow: hidden;
+}

@@ -103,7 +103,7 @@ export default [
               }
 
           ],
-          playData:[
+          "playData":[
             {
               id:0,
               url:'../../assets/images/video/u1692.jpg',
@@ -134,7 +134,122 @@ export default [
               desc:'黑胡子大神第一视角 发条地精',
               belong:'DOTA2大神学院'
             }
+          ],
+          "rankingData":[
+            {
+              id:1,
+              titie:'视频标题视频标题视频标题视频标题视1',
+              deliver:'解说名字',
+              playAmount:99,
+              time:"2019-8-13"
+            },
+            {
+              id:2,
+              titie:'视频标题视频标题视频标题视频标题视12',
+              deliver:'解说名字2',
+              playAmount:999992,
+              time:"2019-7-30"
+            },
+            {
+              id:3,
+              titie:'视频标题视频标题视频标题视频标题视13',
+              deliver:'解说名字3',
+              playAmount:99993,
+              time:"2019-8-13"
+            },
+            {
+              id:4,
+              titie:'视频标题视频标题视频标题视频标题视14',
+              deliver:'解说名字4',
+              playAmount:99994,
+              time:"2019-7-29"
+            },
+            {
+              id:5,
+              titie:'视频标题视频标题视频标题视频标题视15',
+              deliver:'解说名字5',
+              playAmount:999995,
+              time:"2019-7-19"
+            },
+            {
+              id:6,
+              titie:'视频标题视频标题视频标题视频标题视16',
+              deliver:'解说名字6',
+              playAmount:9996,
+              time:"2019-8-11"
+            },
+            {
+              id:7,
+              titie:'视频标题视频标题视频标题视频标题视17',
+              deliver:'解说名字7',
+              playAmount:9997,
+              time:"2019-5-19"
+            },
+            {
+              id:8,
+              titie:'视频标题视频标题视频标题视频标题视18',
+              deliver:'解说名字8',
+              playAmount:9998,
+              time:"2019-8-10"
+            },
+            {
+              id:9,
+              titie:'视频标题视频标题视频标题视频标题视15',
+              deliver:'解说名字5',
+              playAmount:9991,
+              time:"2019-7-19"
+            },
+            {
+              id:10,
+              titie:'视频标题视频标题视频标题视频标题视16',
+              deliver:'解说名字6',
+              playAmount:9996,
+              time:"2019-8-7"
+            },
+            {
+              id:11,
+              titie:'视频标题视频标题视频标题视频标题视17',
+              deliver:'解说名字7',
+              playAmount:99997,
+              time:"2019-8-9"
+            },
+            {
+              id:12,
+              titie:'视频标题视频标题视频标题视频标题视18',
+              deliver:'解说名字8',
+              playAmount:99998,
+              time:"2019-8-11"
+            },
+            {
+              id:13,
+              titie:'视频标题视频标题视频标题视频标题视15',
+              deliver:'解说名字5',
+              playAmount:9991,
+              time:"2019-7-29"
+            },
+            {
+              id:14,
+              titie:'视频标题视频标题视频标题视频标题视16',
+              deliver:'解说名字6',
+              playAmount:9996,
+              time:"2019-7-23"
+            },
+            {
+              id:15,
+              titie:'视频标题视频标题视频标题视频标题视17',
+              deliver:'解说名字7',
+              playAmount:9997,
+              time:"2019-8-13"
+            },
+            {
+              id:16,
+              titie:'视频标题视频标题视频标题视频标题视18',
+              deliver:'解说名字8',
+              playAmount:99998,
+              time:"2019-8-13"
+            }
           ]
+
       }
 
   }
