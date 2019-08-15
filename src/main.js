@@ -10,8 +10,12 @@ import './assets/main.scss'; //主要样式
 import VueAwesomeSwiper from 'vue-awesome-swiper'; // 轮播图引入
 import 'swiper/dist/css/swiper.css' // 轮播图样式
 
+import vuescroll from 'vuescroll';//滚动条美化
+import 'vuescroll/dist/vuescroll.css';
+
 Vue.config.productionTip = false;
 
+Vue.use(vuescroll);
 Vue.use(globalComponent);
 Vue.use(VueAwesomeSwiper);
 

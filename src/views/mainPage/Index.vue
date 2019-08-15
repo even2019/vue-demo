@@ -310,7 +310,7 @@ export default {
       this.currentIndex = index
     },
     handleTab(val) {
-      console.log(val, 'xxxxxxxxxxxxx');
+      window.console.log(val, 'xxxxxxxxxxxxx');
     }
   }
 }

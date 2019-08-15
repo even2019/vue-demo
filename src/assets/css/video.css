@@ -106,6 +106,9 @@
 .video-center .vid-play-content .play-left .img-big ul {
   position: relative;
   top: 0;
+}
+
+.video-center .vid-play-content .play-left .img-big ul.tran {
   transition: all .3s linear;
 }
 
@@ -132,6 +135,7 @@
   width: 123px;
   margin-left: 2px;
   height: 100%;
+  overflow: hidden;
 }
 
 .video-center .vid-play-content .play-left .img-small li {
@@ -202,7 +206,6 @@
 
 .video-center .vid-play-content .play-right .ranking-list {
   height: 370px;
-  overflow: hidden;
 }
 
 .video-center .vid-play-content .play-right .ranking-list li {
@@ -272,4 +275,47 @@
 
 .video-center .vid-play-content .play-right .ranking-list li .ranking-content .r-info .deliver {
   margin-right: 15px;
+}
+
+.video-center .vid-content .tabAll {
+  margin-top: 15px;
+}
+
+.video-center .vid-content .tabAll .tab {
+  background: #0f272e;
+  border: 1px solid #112329;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.video-center .vid-content .tabAll .content {
+  border: 1px solid #0f272e;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.video-center .vid-content .tabAll .content .video ul {
+  padding: 10px 9px;
+}
+
+.video-center .vid-content .title {
+  background: none;
+  overflow: hidden;
+}
+
+.video-center .vid-content .left span {
+  position: relative;
+  padding-left: 25px;
+  font-size: 24px;
+  color: #D2D8DA;
+}
+
+.video-center .vid-content .left span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 30px;
+  border-left: 6px solid #0099CC;
 }

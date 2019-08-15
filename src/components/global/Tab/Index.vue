@@ -27,7 +27,7 @@
         <slot name="content"></slot>
       </div>
       <div v-else class="video">
-        <ul>
+        <ul class="clearFix">
           <li v-for="(item, index) in content" :key="index">
             <div>
               <div :style="{background: `url('${item.imgUrl}') no-repeat center/110%`}" class="videoImg">
@@ -150,7 +150,8 @@ export default {
         float: left;
         text-align: center;
         line-height: 60px;
-        width: 90px;
+        min-width: 90px;
+        padding:0 15px;
         height: 60px;
         color: #a2abaf;
         &.active {

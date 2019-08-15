@@ -43,7 +43,7 @@ export default {
 
   created () {
     Login().then((res) => {
-      console.log(res);
+      window.console.log(res);
     });
   }
 }

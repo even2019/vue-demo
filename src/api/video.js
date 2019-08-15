@@ -1,3 +1,8 @@
+
+const contentImg = require('../assets/images/mainPage/tvInterface.jpg');
+const contentUser = require('../assets/images/mainPage/iconUser.png');
+const populationIcon = require('../assets/images/mainPage/smallPerson.png');
+const tvIcon = require('../assets/images/mainPage/iconTv.png');
 export default [
   {
       apiName: 'video',
@@ -133,6 +138,12 @@ export default [
               url:'../../assets/images/video/u6536.jpg',
               desc:'黑胡子大神第一视角 发条地精',
               belong:'DOTA2大神学院'
+            },
+            {
+              id:5,
+              url:'../../assets/images/video/u1692.jpg',
+              desc:'【09DOTA2单排】但是巨魔不可能死',
+              belong:'dota第一视角直播录制'
             }
           ],
           "rankingData":[
@@ -211,7 +222,7 @@ export default [
               titie:'视频标题视频标题视频标题视频标题视17',
               deliver:'解说名字7',
               playAmount:99997,
-              time:"2019-8-9"
+              time:"2019-8-14"
             },
             {
               id:12,
@@ -246,10 +257,119 @@ export default [
               titie:'视频标题视频标题视频标题视频标题视18',
               deliver:'解说名字8',
               playAmount:99998,
-              time:"2019-8-13"
+              time:"2019-8-14"
             }
+          ],
+          "contentList2":[
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
+            {
+              imgUrl: contentImg,
+              videoUrl: '#',
+              userIcon: contentUser,
+              userName: '2009',
+              populationIcon: populationIcon,
+              populationNum: '32.1万',
+              tvIcon: tvIcon
+            },
           ]
-
       }
 
   }

@@ -20,11 +20,11 @@
       <div class="vid-play-content">
         <div class="play-left">
           <div class="img-big">
-            <ul :style="{top:ulTop}">
+            <ul :style="{top:ulTop}" :class="{tran:acitveTransition}">
               <li v-for="(item,index) in playData" 
                   @mouseleave="continueInterval()"
                   @mouseover="stopInterval()" 
-                  :style="{backgroundImage:'url('+imgList[index]+')'}" 
+                  :style="{backgroundImage:'url('+imgList[index].img+')'}" 
                   :key="index" >
                 <span class="img-info">{{item.desc}}</span>
               </li>
@@ -34,9 +34,9 @@
           <ul class="img-small">
             <li v-for="(item,index) in imgList" 
                 :key="index" 
-                @click="dropTo(index)" 
-                :class="{active:index==nowIndex}">
-              <span :style="{backgroundImage:'url('+item+')'}"></span>  
+                @click="dropTo(index,item)" 
+                :class="{active:index==(nowIndex==5?index=0:index=nowIndex)}">
+              <span :style="{backgroundImage:'url('+item.img+')'}"></span>  
             </li>       
           </ul>
         </div>
@@ -54,37 +54,63 @@
               </li>            
             </ul>
           </div>
-          <ul class="ranking-list">
-            <li v-for="(item,index) in rankingData" 
-                :class="{active:index==rankActive}" 
-                :key="index" @mouseover="rankActive=index">
-              <div class="order-content">
-                <span class="order">{{index+1}}</span>  
-              </div>             
-              <div class="ranking-content">
-                <div class="r-title">{{item.titie.slice(0,13)+" "+item.time}}</div>
-                <div class="r-info">
-                  <span class="deliver">投递：{{item.deliver}}</span>
-                  <span class="playAmount">播放：{{item.playAmount}}</span>
+          <vue-scroll style="width:320px;height:370px">
+            <ul class="ranking-list">
+              <li v-for="(item,index) in rankingData" 
+                  :class="{active:index==rankActive}" 
+                  :key="index" @mouseover="rankActive=index">
+                <div class="order-content">
+                  <span class="order">{{index+1}}</span>  
+                </div>             
+                <div class="ranking-content">
+                  <div class="r-title">{{item.titie.slice(0,13)+" "+item.time}}</div>
+                  <div class="r-info">
+                    <span class="deliver">投递：{{item.deliver}}</span>
+                    <span class="playAmount">播放：{{item.playAmount}}</span>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </vue-scroll>
         </div>
       </div>
-      <div class="vid-label"></div>
-      <div class="vid-list"></div>
-      <div class="advert"></div>
-      <div class="comment-operate"></div>
-      <div class="comment-list"></div>
+      <div class="vid-content">
+        <g-tab :options="tabOption2" :tabs="tabList2" :content="contentList2">
+          <template v-slot:title>
+            <div class="left">
+              <span>解说</span>
+            </div>       
+          </template>
+        </g-tab>
+        <g-tab :options="tabOption2" :tabs="tabList2" :content="contentList2">
+          <template v-slot:title>
+            <div class="left">
+              <span>集锦</span>
+            </div>       
+          </template>
+        </g-tab>
+        <g-tab :options="tabOption2" :tabs="tabList2" :content="contentList2">
+          <template v-slot:title>
+            <div class="left">
+              <span>赛事</span>
+            </div>       
+          </template>
+        </g-tab>
+        <g-tab :options="tabOption2" :tabs="tabList2" :content="contentList2">
+          <template v-slot:title>
+            <div class="left">
+              <span>英雄</span>
+            </div>       
+          </template>
+        </g-tab>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { Video } from '@/services/public.js';
-import { setInterval, clearInterval, setTimeout } from 'timers';
-
+import { setInterval, clearInterval} from 'timers';
 export default {
   data() {
     return {
@@ -96,19 +122,51 @@ export default {
       timeclassify:[
         "月","周","日"
       ],
+      tabOption2:{
+        hasTitle:true,
+        hasContent:true,
+        editTitle:true
+      },
       imgList:[
-        require('../../assets/images/video/u1692.jpg'),
-        require('../../assets/images/video/u1696.jpg'),
-        require('../../assets/images/video/u1698.jpg'),
-        require('../../assets/images/video/u1705.jpg'),
-        require('../../assets/images/video/u6536.jpg')
+        // require('../../assets/images/video/u1692.jpg'),
+        {id:0,img:require('../../assets/images/video/u1692.jpg')},
+        {id:1,img:require('../../assets/images/video/u1696.jpg')},
+        {id:2,img:require('../../assets/images/video/u1698.jpg')},
+        {id:3,img:require('../../assets/images/video/u1705.jpg')},
+        {id:4,img:require('../../assets/images/video/u6536.jpg')},
+        {id:5,img:require('../../assets/images/video/u1692.jpg')},
+        // require('../../assets/images/video/u1696.jpg'),
+        // require('../../assets/images/video/u1698.jpg'),
+        // require('../../assets/images/video/u1705.jpg'),
+        // require('../../assets/images/video/u6536.jpg'),
+        // require('../../assets/images/video/u1692.jpg'),
+      ],
+      contentList2: [],
+      tabList2: [
+        {
+          text: '暴走系列',
+          value: 1
+        },
+        {
+          text: '伊丽莎白鼠',
+          value: 2
+        },
+        {
+          text: '分分钟看完',
+          value: 3
+        },
+        {
+          text: '日本作死小能手',
+          value: 4
+        }
       ],
       rankActive:0,
       nowIndex:0,
       rankingData0:[],
       rankingData30:[],
       rankingData7:[],
-      timeIndex:0
+      timeIndex:0,
+      acitveTransition:true
     }
   },
   computed: {
@@ -134,12 +192,12 @@ export default {
         this.crumbsData=res.list;
         this.playData=res.playData;
         this.rankingData=res.rankingData;
+        this.contentList2=res.contentList2;
         this.rankingData.sort(this.mySort('playAmount'));
         var nowTi=new Date().getTime();
         for(var i=0;i<this.rankingData.length;i++){ 
           let timeDif=nowTi-new Date(this.rankingData[i].time).getTime()
           let day=parseInt(timeDif/(1000*60*60*24));
-          window.console.log(day)
           if(day>=0&&day<1){
             this.rankingData0.push(this.rankingData[i]);
           }
@@ -160,10 +218,12 @@ export default {
   },
   methods: {
     carousel(){
-       if(this.nowIndex<=3){
+       if(this.nowIndex<=4){  
+         this.acitveTransition=true;
         this.nowIndex++
-      }else if(this.nowIndex>3){      
+      }else if(this.nowIndex>4){      
         this.nowIndex=0;
+        this.acitveTransition=false;
       }
     },
     chooseClass(j){
@@ -187,9 +247,9 @@ export default {
         return value2 - value1;
       }
     },
-    dropTo(i){
+    dropTo(i,item){
       clearInterval(this.timer1);
-      this.nowIndex=i;
+      this.nowIndex=item.id; 
       this.timer1=setInterval(this.carousel,3000);
     },
     stopInterval(){

@@ -90,7 +90,9 @@ $url:'./images/video';
         ul{
           position: relative;
           top:0;
-          transition: all .3s linear
+          &.tran{
+            transition: all .3s linear
+          }
         }
         li{
           position: relative;
@@ -114,6 +116,7 @@ $url:'./images/video';
         width:123px;
         margin-left:2px;
         height:100%;
+        overflow: hidden;
         li{
           height:77px;   
           border:2px solid transparent;   
@@ -173,7 +176,6 @@ $url:'./images/video';
       }
       .ranking-list{
         height:370px;
-        overflow: hidden;
         li{
           height:44px;
           padding:13px 10px 3px;
@@ -234,5 +236,50 @@ $url:'./images/video';
         }
       }
     }
+
   }
+  .vid-content{
+    .tabAll{
+      margin-top:15px;
+      .tab{
+        background: #0f272e;
+        border:1px solid #112329;
+        border-bottom:none;
+        box-sizing: border-box;
+      }
+      .content{
+        .video{
+          ul{
+            padding:10px 9px;
+          }
+          
+        }
+        border:1px solid #0f272e;
+        border-top: none;
+        box-sizing:border-box;
+      }
+    }
+    .title{
+      background: none;
+      overflow: hidden;
+    }
+    .left{
+      span{
+        position: relative;
+        padding-left:25px;
+        font-size:24px;
+        color: #D2D8DA;
+        &::before{
+          content:'';
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          height:30px;
+          border-left:6px solid #0099CC;
+        }
+      }
+    }
+  }
+  
 }
